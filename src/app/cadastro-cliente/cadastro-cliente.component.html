@@ -9,51 +9,39 @@
 
     <section class="po-offset-md-2 po-offset-lg-2 po-offset-xl-2 po-offset-sm-1 po-lg-8 po-md-8 po-sm-10">
 
-      <po-stepper>
+      <po-stepper class="po-mt-3" style="display: block;">
         <po-step p-label="Identificação">
 
           <po-container class="po-p-2">
             <h2 class="po-mb-3 po-mt-2">Identificação</h2>
 
-            <div class="po-row po-pb-1">
               <po-input name="cnpj" p-label="CNPJ" [(ngModel)]="cliente.cnpj" p-mask="99.999.999/9999-99"
-                p-placeholder="00.000.000/0000-00" class="po-md-4" p-required>
+                p-placeholder="00.000.000/0000-00" class="po-md-4 po-p-0" p-required>
               </po-input>
-              <p class="po-row po-ml-1 po-font-text-small">Apenas números.</p>
-            </div>
+              <p class="po-row po-font-text-small po-mb-2">Apenas números.</p>
 
-            <div class="po-row po-mb-2">
-              <po-input class="po-md-12" name="razaoSocial" p-label="Razão social ou nome completo"
+              <po-input class="" name="razaoSocial" p-label="Razão social ou nome completo"
                 [(ngModel)]="cliente.razaoSocial" p-placeholder="Digite a razão social ou nome completo do cliente"
                 p-required>
               </po-input>
-            </div>
 
-            <div class="po-row po-mb-2">
-              <po-input class="po-md-12" name="nomeFantasia" p-label="Nome fantasia" [(ngModel)]="cliente.nomeFantasia"
+              <po-input class="po-md-12 po-mb-2 po-p-0" name="nomeFantasia" p-label="Nome fantasia" [(ngModel)]="cliente.nomeFantasia"
                 p-placeholder="Digite o nome fantasia do cliente">
               </po-input>
-            </div>
 
-            <div class="po-row po-mb-2">
-              <po-input class="po-md-4" name="inscricaoEstadual" p-label="Inscrição estadual" p-optional
+              <po-input class="po-md-4 po-p-0" name="inscricaoEstadual" p-label="Inscrição estadual" p-optional
                 p-mask="99.999.9999-9" p-placeholder="00.000.0000-0" [(ngModel)]="cliente.inscricaoEstadual">
               </po-input>
-              <p class="po-row po-ml-1 po-font-text-small">Apenas números.</p>
-            </div>
+              <p class="po-row po-mb-2 po-font-text-small">Apenas números.</p>
 
-            <div class="po-row po-mb-2">
-              <po-input class="po-md-4" name="inscricaoMunicipal" p-label="Inscrição municipal" p-optional
+              <po-input class="po-md-4 po-p-0" name="inscricaoMunicipal" p-label="Inscrição municipal" p-optional
                 p-mask="99.999.9999-99" p-placeholder="00.000.0000-00" [(ngModel)]="cliente.inscricaoMunicipal">
               </po-input>
-              <p class="po-row po-ml-1 po-font-text-small">Apenas números.</p>
-            </div>
+              <p class="po-row po-mb-2 po-font-text-small">Apenas números.</p>
 
-            <div class="po-row po-mb-2">
-              <po-select class="po-md-12" name="tipo" p-label="Tipo de cliente" [p-options]="tipoCliente"
+              <po-select class="po-md-12 po-mb-2 po-p-0" name="tipo" p-label="Tipo de cliente" [p-options]="tipoCliente"
                 [(ngModel)]="cliente.tipo" p-required>
               </po-select>
-            </div>
 
             <div class="po-row po-pb-2">
 
@@ -71,13 +59,11 @@
               </div>
             </div>
 
-            <div class="po-row po-mb-1">
-              <po-input class="po-md-3" name="telefoneComercial" p-label="Telefone comercial"
-                p-placeholder="(00) 0000-0000" p-mask="(99) 9999-9999" p-required
-                [(ngModel)]="cliente.telefoneComercial">
-              </po-input>
-              <p class="po-row po-ml-1 po-font-text-small">Apenas números.</p>
-            </div>
+            <po-input class="po-md-3 po-p-0" name="telefoneComercial" p-label="Telefone comercial"
+              p-placeholder="(00) 0000-0000" p-mask="(99) 9999-9999" p-required
+              [(ngModel)]="cliente.telefoneComercial">
+            </po-input>
+            <p class="po-row po-font-text-small">Apenas números.</p>
 
           </po-container>
 
