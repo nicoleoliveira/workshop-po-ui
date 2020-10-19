@@ -1,4 +1,7 @@
-# GestaoVendas
+# Workshop Angular + PO UI - Gestão de vendas
+
+Código fonte da apresentação ministrada para o Tech Week TOTVS.
+Tema: Criando aplicações com Angular e PO UI.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
