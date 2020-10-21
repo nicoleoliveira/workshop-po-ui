@@ -12,59 +12,60 @@
       <po-stepper class="po-mt-3" style="display: block;">
         <po-step p-label="Identificação">
 
-          <po-container class="po-p-2">
-            <h2 class="po-mb-3 po-mt-2">Identificação</h2>
+          <po-container p-no-padding class="po-mt-4" style="display: block;">
+            <form class="po-p-2">
+              <h2 class="po-font-subtitle po-mb-3">Identificação</h2>
 
-              <po-input name="cnpj" p-label="CNPJ" [(ngModel)]="cliente.cnpj" p-mask="99.999.999/9999-99"
-                p-placeholder="00.000.000/0000-00" class="po-md-4 po-p-0" p-required>
-              </po-input>
-              <p class="po-row po-font-text-small po-mb-2">Apenas números.</p>
+                <po-input name="cnpj" p-label="CNPJ" [(ngModel)]="cliente.cnpj" p-mask="99.999.999/9999-99 "
+                  p-placeholder="00.000.000/0000-00" class="po-md-4 po-p-0" p-required>
+                </po-input>
+                <p class="po-row po-font-text-small po-mb-2">Apenas números.</p>
 
-              <po-input class="" name="razaoSocial" p-label="Razão social ou nome completo"
-                [(ngModel)]="cliente.razaoSocial" p-placeholder="Digite a razão social ou nome completo do cliente"
-                p-required>
-              </po-input>
+                <po-input class="" name="razaoSocial" p-label="Razão social ou nome completo"
+                  [(ngModel)]="cliente.razaoSocial" p-placeholder="Digite a razão social ou nome completo do cliente"
+                  p-required>
+                </po-input>
 
-              <po-input class="po-md-12 po-mb-2 po-p-0" name="nomeFantasia" p-label="Nome fantasia" [(ngModel)]="cliente.nomeFantasia"
-                p-placeholder="Digite o nome fantasia do cliente">
-              </po-input>
+                <po-input class="po-md-12 po-mb-2 po-p-0" name="nomeFantasia" p-label="Nome fantasia" [(ngModel)]="cliente.nomeFantasia"
+                  p-placeholder="Digite o nome fantasia do cliente">
+                </po-input>
 
-              <po-input class="po-md-4 po-p-0" name="inscricaoEstadual" p-label="Inscrição estadual" p-optional
-                p-mask="99.999.9999-9" p-placeholder="00.000.0000-0" [(ngModel)]="cliente.inscricaoEstadual">
-              </po-input>
-              <p class="po-row po-mb-2 po-font-text-small">Apenas números.</p>
+                <po-input class="po-md-4 po-p-0" name="inscricaoEstadual" p-label="Inscrição estadual" p-optional
+                  p-mask="99.999.9999-9" p-placeholder="00.000.0000-0" [(ngModel)]="cliente.inscricaoEstadual">
+                </po-input>
+                <p class="po-row po-mb-2 po-font-text-small">Apenas números.</p>
 
-              <po-input class="po-md-4 po-p-0" name="inscricaoMunicipal" p-label="Inscrição municipal" p-optional
-                p-mask="99.999.9999-99" p-placeholder="00.000.0000-00" [(ngModel)]="cliente.inscricaoMunicipal">
-              </po-input>
-              <p class="po-row po-mb-2 po-font-text-small">Apenas números.</p>
+                <po-input class="po-md-4 po-p-0" name="inscricaoMunicipal" p-label="Inscrição municipal" p-optional
+                  p-mask="99.999.9999-99" p-placeholder="00.000.0000-00" [(ngModel)]="cliente.inscricaoMunicipal">
+                </po-input>
+                <p class="po-row po-mb-2 po-font-text-small">Apenas números.</p>
 
-              <po-select class="po-md-12 po-mb-2 po-p-0" name="tipo" p-label="Tipo de cliente" [p-options]="tipoCliente"
-                [(ngModel)]="cliente.tipo" p-required>
-              </po-select>
+                <po-select class="po-md-12 po-mb-2 po-p-0" name="tipo" p-label="Tipo de cliente" [p-options]="tipoCliente"
+                  [(ngModel)]="cliente.tipo" p-required>
+                </po-select>
 
-            <div class="po-row po-pb-2">
+              <div class="po-row po-pb-2">
 
-              <div class="po-md-6">
-                <po-info p-label="Código do cliente" p-value="123456">
-                </po-info>
-                <p class="po-pt-3 po-font-text-small">O código do cliente que foi vinculado a esse cadastro.</p>
+                <div class="po-md-6">
+                  <po-info p-label="Código do cliente" p-value="123456">
+                  </po-info>
+                  <p class="po-pt-3 po-font-text-small">O código do cliente que foi vinculado a esse cadastro.</p>
+                </div>
+
+                <div class="po-md-6">
+                  <po-number class="po-md-5" name="codigoLoja" p-label="Código da loja" p-required
+                    [(ngModel)]="cliente.codigoLoja">
+                  </po-number>
+                  <p class="po-row po-font-text-small">Sugerimos um código de identificação, mas você pode alterá-lo.</p>
+                </div>
               </div>
 
-              <div class="po-md-6">
-                <po-number class="po-md-4" name="codigoLoja" p-label="Código da loja" p-required
-                  [(ngModel)]="cliente.codigoLoja">
-                </po-number>
-                <p class="po-row po-font-text-small">Sugerimos um código de identificação, mas você pode alterá-lo.</p>
-              </div>
-            </div>
-
-            <po-input class="po-md-3 po-p-0" name="telefoneComercial" p-label="Telefone comercial"
-              p-placeholder="(00) 0000-0000" p-mask="(99) 9999-9999" p-required
-              [(ngModel)]="cliente.telefoneComercial">
-            </po-input>
-            <p class="po-row po-font-text-small">Apenas números.</p>
-
+              <po-input class="po-md-3 po-p-0" name="telefoneComercial" p-label="Telefone comercial"
+                p-placeholder="(00) 0000-0000" p-mask="(99) 9999-9999" p-required
+                [(ngModel)]="cliente.telefoneComercial">
+              </po-input>
+              <p class="po-row po-font-text-small">Apenas números.</p>
+            </form>
           </po-container>
 
           <footer class="po-pb-3 po-mt-3" style="float: right;">

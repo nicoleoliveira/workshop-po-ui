@@ -5,24 +5,33 @@
   <po-menu [p-menus]="menus" p-logo="https://po-ui.io/assets/po-logos/po_color.svg"></po-menu>
 
   <po-page-default p-title="Cadastros de cliente">
-    <p><b>Cliente vinculado:</b> Mil Tons de Nascimento LTDA.</p>
-    <section class="po-offset-md-2 po-offset-lg-2 po-offset-xl-2 po-offset-sm-1 po-lg-8 po-md-8 po-sm-10" style="position:relative;">
-      <div class="po-mt-3">
-        <po-stepper>
-          <po-step p-label="Identificação"></po-step>
-          <po-step p-label="Contatos"></po-step>
-          <po-step p-label="Endereços"></po-step>
-          <po-step p-label="Financeiro"></po-step>
-        </po-stepper>
-      </div>
-      <po-container class="po-p-2">
-        <h2 class="po-font-subtitle po-p-1">Identificação</h2>
-        <po-dynamic-form [p-fields]="fields"> </po-dynamic-form>
-      </po-container>
-      <footer class="po-mb-3" style="position:absolute; right:8px;">
-        <po-button class="po-pr-1" p-label="Cancelar cadastro" p-type="danger"></po-button>
-        <po-button p-label="Proximo passo" p-type="primary"></po-button>
-      </footer>
+    <p> <b class="po-font-text-large-bold">Cliente vinculado:</b> Mil Tons de Nascimento </p>
+
+    <section class="po-offset-md-2 po-offset-lg-2 po-offset-xl-2 po-offset-sm-1 po-lg-8 po-md-8 po-sm-10">
+
+      <po-stepper class="po-mt-3" style="display: block;">
+        <po-step p-label="Identificação">
+
+          <po-container p-no-padding class="po-mt-4" style="display: block;">
+            <section class="po-p-2">
+              <h2 class="po-font-subtitle po-mb-3 po-pl-1">Identificação</h2>
+              <po-dynamic-form [p-fields]="fields" [p-value]="cliente"> </po-dynamic-form>
+            </section>
+          </po-container>
+
+          <footer class="po-pb-3 po-mt-3" style="float: right;">
+            <po-button p-label="Cancelar cadastro" p-type="danger" (p-click)="onClick()">
+            </po-button>
+
+            <po-button class="po-ml-2" p-label="Próximo passo" p-type="primary" (p-click)="onClick()">
+            </po-button>
+          </footer>
+        </po-step>
+
+        <po-step p-label="Contato"></po-step>
+        <po-step p-label="Endereços"></po-step>
+        <po-step p-label="Financeiro"></po-step>
+      </po-stepper>
     </section>
   </po-page-default>
 </div>

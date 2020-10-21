@@ -11,6 +11,12 @@ import {
   templateUrl: './cadastro-cliente-dynamic.component.html',
 })
 export class CadastroClienteDynamicComponent {
+
+  cliente = {
+    cc: '123456',
+    tipo: 'empty'
+  };
+
   readonly menus: Array<PoMenuItem> = [
     {
       label: 'Indicadores de venda',
@@ -84,6 +90,7 @@ export class CadastroClienteDynamicComponent {
       label: 'Tipo de cliente',
       gridColumns: 12,
       options: [
+        { label: 'Selecione o tipo de cliente', value: 'empty' },
         { label: 'Cliente', value: 1 },
         { label: 'São Paulo', value: 2 },
         { label: 'Rio de Janeiro', value: 3 },
@@ -95,7 +102,8 @@ export class CadastroClienteDynamicComponent {
       label: 'Código do cliente',
       help: 'O código do cliente que foi vinculado a esse cadastro.',
       gridColumns: 6,
-      type: 'number'
+      type: 'number',
+      disabled: true
     },
     {
       property: 'cl',
